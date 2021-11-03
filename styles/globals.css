@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    /* height: 100%; */
+    box-sizing: border-box;
+    touch-action: manipulation;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-x: none;
+    width: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    color: #272726;
+}
+
+a {
+    transition-property: background-color, color;
+    @apply duration-100 ease-in-out;
+}
+:root {
+    --header-height: 100px;
+    @apply lg:text-[17px] xl:text-[18px];
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+h1,
+h1,
+h3,
+h4,
+h5,
+h6,
+h7 {
+    @apply font-heading;
+}
+
+.shadow-custom {
+    box-shadow: 0 3px 5px rgb(70 70 70 / 10%);
+}
